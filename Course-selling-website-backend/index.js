@@ -46,7 +46,7 @@ app.post('/admin/signup', (req, res) => {
 
 app.post('/admin/login', (req, res) => {
   const admin=req.body;
-  const existingAdmin=ADMINS.find(temp=>temp.username===admin.username && temp.password===admin.password);
+  const existingAdmin=ADMINS.find(temp=>temp.username===admin.username && temp.pasword===admin.password);
   if(existingAdmin){
     const token=generateJWT(existingAdmin);
     res.json({message:token});
