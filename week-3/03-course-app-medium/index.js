@@ -45,7 +45,6 @@ app.post('/admin/signup', (req, res) => {
 });
 
 app.post('/admin/login', (req, res) => {
-  // logic to log in admin
   const admin=req.body;
   const existingAdmin=ADMINS.find(temp=>temp.username===admin.username && temp.password===admin.password);
   if(existingAdmin){
